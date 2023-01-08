@@ -27,17 +27,18 @@
     wifi.backend = "wpa_supplicant";
     wifi.powersave = false;
   };
-  networking.nameservers = [
-    "1.1.1.1"
-    "8.8.8.8"
-    "1.0.0.1"
-  ];
-  networking.enableIPv6 = false;
-  networking.resolvconf.enable = false;
-  networking.timeServers = [ "time.google.com" "time1.google.com" "pool.ntp.org" ];
-  networking.wireless.iwd = {
-    enable = false;
+
+  services.resolved = {
+    enable = true;
+    settings.Resolve.DNS = [
+      "1.1.1.1"
+      "1.0.0.1"
+      "8.8.8.8"
+      "8.8.4.4"
+    ];
   };
+  networking.enableIPv6 = true;
+  networking.resolvconf.enable = false;
 
   # Networking for spotify
   networking.firewall.allowedTCPPorts = [ 57621 ]; #sync local tracks from your filesystem with mobile devices in the same network
@@ -76,13 +77,6 @@
   # nixpkgs config
   nixpkgs.config = {
     android_sdk.accept_license = true;
-  };
-
-  services.resolved = {
-    enable = true;
-
-    settings.Resolve.DNSSEC = "true";
-    settings.Resolve.DNSOverTLS = "true";
   };
 
   # automatically update firmware for ASUS laptop
