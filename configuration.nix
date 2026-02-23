@@ -64,7 +64,7 @@
   users.users.phattaraphan = {
     isNormalUser = true;
     description = "Phattaraphan";
-    extraGroups = [ "networkmanager" "wheel" "video" ]; # added video for NVIDIA
+    extraGroups = [ "networkmanager" "wheel" "video" "input" ]; # added video for NVIDIA
     packages = with pkgs; [];
   };
 
@@ -215,7 +215,12 @@
     nodejs
     lsof
     rustup
+    appimage-run
   ];
+
+    services.udev.extraRules = ''
+      KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
+  '';
   
   # enable polkit (PolicyKit) agent
   security.polkit.enable = true;
