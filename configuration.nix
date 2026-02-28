@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -137,6 +137,7 @@
   environment.shellAliases = {
     brightset = "brightnessctl set";
     firefox = "setsid firefox >/dev/null 2>&1 &";
+    zen = "setsid zen zen >/dev/null 2>&1 &";
     mute = "pamixer -m";
     unmute = "pamixer -u";
     prism = "setsid prismlauncher >/dev/null 2>&1 &";
@@ -216,6 +217,7 @@
     lsof
     rustup
     appimage-run
+    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default #zen-browser
   ];
 
     services.udev.extraRules = ''
