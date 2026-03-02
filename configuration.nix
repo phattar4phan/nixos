@@ -65,7 +65,7 @@
   users.users.phattaraphan = {
     isNormalUser = true;
     description = "Phattaraphan";
-    extraGroups = [ "networkmanager" "wheel" "video" "input" ]; # added video for NVIDIA
+    extraGroups = [ "networkmanager" "wheel" "video" "input" "crossmacro"]; # added video for NVIDIA
     packages = with pkgs; [];
   };
 
