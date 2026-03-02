@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    inputs.crossmacro.nixosModules.default
   ];
 
   # Bootloader
@@ -66,6 +67,11 @@
     description = "Phattaraphan";
     extraGroups = [ "networkmanager" "wheel" "video" "input" ]; # added video for NVIDIA
     packages = with pkgs; [];
+  };
+
+  programs.crossmacro = {
+    enable = true;
+    users = [ "phattaraphan" ];
   };
 
   # Allow unfree packages (required for NVIDIA, VSCode)
