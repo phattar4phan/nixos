@@ -7,6 +7,9 @@
 
     #zen browser
     zen-browser.url = "github:youwen5/zen-browser-flake";
+
+    #crossmacro
+    crossmacro.url = "github:alper-han/CrossMacro";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
