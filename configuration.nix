@@ -166,7 +166,6 @@
     deact = "deactivate"; #only for deactivate from python virtualenv
     libreoffice = "setsid libreoffice >/dev/null 2>&1 &";
     cm = "setsid crossmacro >/dev/null 2>&1 &";
-    chrome = "setsid chrome >/dev/null 2>&1 &";
   };
 
   services.printing.enable = true;
