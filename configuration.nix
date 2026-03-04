@@ -65,9 +65,15 @@
   users.users.phattaraphan = {
     isNormalUser = true;
     description = "Phattaraphan";
-    extraGroups = [ "networkmanager" "wheel" "video" "input" "crossmacro"]; # added video for NVIDIA
+    extraGroups = [ "networkmanager" "wheel" "video" "input" "uinput" "crossmacro"]; # added video for NVIDIA
     packages = with pkgs; [];
   };
+
+  users.groups.uinput = {};
+
+  services.udev.extraRules = ''
+    KERNEL=="uinput", GROUP="uinput", MODE="0660", OPTIONS+="static_node=uinput"
+  '';
 
   programs.crossmacro = {
     enable = true;
@@ -226,10 +232,6 @@
     appimage-run
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default #zen-browser
   ];
-
-    services.udev.extraRules = ''
-      KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
-  '';
   
   # enable polkit (PolicyKit) agent
   security.polkit.enable = true;
@@ -299,6 +301,8 @@
     dates = "weekly";
     options = "--delete-older-than 7d";
   };
+
+  boot.kernelModules = [ "uinput" ];
 
   # hides old stuff from the boot menu but keeps them on disk for 7 days.
   boot.loader.systemd-boot.configurationLimit = 5;
