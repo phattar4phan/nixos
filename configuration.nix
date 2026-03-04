@@ -231,6 +231,7 @@
     rustup
     appimage-run
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default #zen-browser
+    google-chrome
   ];
   
   # enable polkit (PolicyKit) agent
