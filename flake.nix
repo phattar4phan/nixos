@@ -5,9 +5,6 @@
     # Using the same version as your stateVersion
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
-    #zen browser
-    zen-browser.url = "github:youwen5/zen-browser-flake";
-
     #crossmacro
     crossmacro.url = "github:alper-han/CrossMacro";
   };

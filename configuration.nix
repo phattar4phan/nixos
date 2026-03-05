@@ -230,7 +230,6 @@
     lsof
     rustup
     appimage-run
-    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default #zen-browser
   ];
   
   # enable polkit (PolicyKit) agent
