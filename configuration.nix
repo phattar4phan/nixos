@@ -166,6 +166,9 @@
     deact = "deactivate"; #only for deactivate from python virtualenv
     libreoffice = "setsid libreoffice >/dev/null 2>&1 &";
     cm = "setsid crossmacro >/dev/null 2>&1 &";
+    gimp = "setsid gimp >/dev/null 2>&1 &";
+    krita = "setsid krita >/dev/null 2>&1 &";
+    pinta = "setsid pinta >/dev/null 2>&1 &";
   };
 
   services.printing.enable = true;
@@ -230,6 +233,9 @@
     lsof
     rustup
     appimage-run
+    gimp
+    krita
+    pinta
   ];
   
   # enable polkit (PolicyKit) agent
