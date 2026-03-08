@@ -236,8 +236,9 @@
     gimp
     krita
     pinta
-    webkitgtk
+    webkitgtk_4_1
     gtk3
+    gsettings-desktop-schemas
   ];
   
   # enable polkit (PolicyKit) agent
