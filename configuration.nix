@@ -236,6 +236,8 @@
     gimp
     krita
     pinta
+    webkitgtk
+    gtk3
   ];
   
   # enable polkit (PolicyKit) agent
