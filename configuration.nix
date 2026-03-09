@@ -210,7 +210,6 @@
     btop
     pamixer
     discord
-    spotify
     asusctl
     nautilus
     acpi
