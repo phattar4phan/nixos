@@ -247,6 +247,7 @@
     gtk3
     gsettings-desktop-schemas
     antigravity-fhs
+    gamescope
   ];
   
   # enable polkit (PolicyKit) agent
