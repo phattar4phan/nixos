@@ -188,6 +188,12 @@
   services.udisks2.enable = true;
   programs.dconf.enable = true;
 
+  # steam
+  programs.steam = {
+    enable = true; # Master switch, already covered in installation
+    remotePlay.openFirewall = true;  # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports for Source Dedicated Server hosting
+  };
 
   # System packages
   environment.systemPackages = with pkgs; [
