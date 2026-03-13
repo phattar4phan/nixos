@@ -170,6 +170,7 @@
     krita = "setsid krita >/dev/null 2>&1 &";
     pinta = "setsid pinta >/dev/null 2>&1 &";
     steam = "setsid steam >/dev/null 2>&1 &";
+    antigravity = "setsid antigravity >/dev/null 2>&1 &";
   };
 
   services.printing.enable = true;
@@ -245,6 +246,7 @@
     webkitgtk_4_1
     gtk3
     gsettings-desktop-schemas
+    antigravity-fhs
   ];
   
   # enable polkit (PolicyKit) agent
