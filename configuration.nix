@@ -171,6 +171,7 @@
     pinta = "setsid pinta >/dev/null 2>&1 &";
     steam = "setsid steam >/dev/null 2>&1 &";
     antigravity = "setsid antigravity >/dev/null 2>&1 &";
+    claude = "claude-code";
   };
 
   services.printing.enable = true;
@@ -248,6 +249,7 @@
     gsettings-desktop-schemas
     antigravity-fhs
     gamescope
+    claude-code
   ];
   
   # enable polkit (PolicyKit) agent
