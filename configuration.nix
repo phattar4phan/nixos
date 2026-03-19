@@ -249,6 +249,7 @@
     antigravity-fhs
     gamescope
     claude-code
+    gemini-cli
   ];
   
   # enable polkit (PolicyKit) agent
