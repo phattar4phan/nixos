@@ -171,7 +171,6 @@
     pinta = "setsid pinta >/dev/null 2>&1 &";
     steam = "setsid steam >/dev/null 2>&1 &";
     antigravity = "setsid antigravity >/dev/null 2>&1 &";
-    claude = "claude-code";
   };
 
   services.printing.enable = true;
