@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1772569794,
-        "narHash": "sha256-abYABtKxo94ybjD7Gj2QNfI7F55SeMEDKAnPSxnzdYU=",
+        "lastModified": 1773254256,
+        "narHash": "sha256-c/VMNi0pVwHVhICl8gCtvZ6oerO9d7AyMNJT8wRGlM8=",
         "owner": "alper-han",
         "repo": "CrossMacro",
-        "rev": "5f1296d74eae3e402f53882e4cb07bb92fb83ee8",
+        "rev": "2a0ac6f2226ec4f12bfef5ee6bf6e435fb31444a",
         "type": "github"
       },
       "original": {
@@ -70,11 +70,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1772822230,
-        "narHash": "sha256-yf3iYLGbGVlIthlQIk5/4/EQDZNNEmuqKZkQssMljuw=",
+        "lastModified": 1773814637,
+        "narHash": "sha256-GNU+ooRmrHLfjlMsKdn0prEKVa0faVanm0jrgu1J/gY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "71caefce12ba78d84fe618cf61644dce01cf3a96",
+        "rev": "fea3b367d61c1a6592bc47c72f40a9f3e6a53e96",
         "type": "github"
       },
       "original": {
