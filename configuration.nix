@@ -129,6 +129,9 @@
     GTK_IM_MODULE = "fcitx";
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
+
+    GDK_BACKEND = "x11";
+    QT_QPA_PLATFORM = "xcb";
   };
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
@@ -250,6 +253,9 @@
     gamescope
     claude-code
     gemini-cli
+    wineWowPackages.waylandFull
+    winetricks
+    wget
   ];
   
   # enable polkit (PolicyKit) agent
