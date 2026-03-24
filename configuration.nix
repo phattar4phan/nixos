@@ -256,6 +256,7 @@
     wineWowPackages.waylandFull
     winetricks
     wget
+    bibata-cursors
   ];
   
   # enable polkit (PolicyKit) agent
