@@ -257,6 +257,7 @@
     winetricks
     wget
     bibata-cursors
+    tradingview
   ];
   
   # enable polkit (PolicyKit) agent
