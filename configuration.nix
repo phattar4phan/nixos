@@ -174,6 +174,7 @@
     pinta = "setsid pinta >/dev/null 2>&1 &";
     steam = "setsid steam >/dev/null 2>&1 &";
     antigravity = "setsid antigravity >/dev/null 2>&1 &";
+    tradingview = "setsid tradingview >/dev/null 2>&1 &";
   };
 
   services.printing.enable = true;
