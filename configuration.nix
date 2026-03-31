@@ -152,14 +152,12 @@
   environment.shellAliases = {
     brightset = "brightnessctl set";
     firefox = "setsid firefox >/dev/null 2>&1 &";
-    zen = "setsid zen zen >/dev/null 2>&1 &";
     mute = "pamixer -m";
     unmute = "pamixer -u";
     prism = "setsid prismlauncher >/dev/null 2>&1 &";
     px = "pamixer";
     discord = "setsid discord >/dev/null 2>&1 &";
-    spotify = "setsid spotify >/dev/null 2>&1 &";
-    sober = "setsid flatpak run org.vinegarhq.Sober >/dev/null 2>&1 &";
+    roblox = "setsid flatpak run org.vinegarhq.Sober >/dev/null 2>&1 &";
     nautilus = "setsid nautilus >/dev/null 2>&1 &";
     davinci = "setsid davinci-resolve >/dev/null 2>&1 &";
     vlc = "setsid vlc >/dev/null 2>&1 &";
