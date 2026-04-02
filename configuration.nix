@@ -120,18 +120,14 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    LIBVA_DRIVER_NAME = "nvidia";
     XDG_SESSION_TYPE = "wayland";
+
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    CUDA_PATH = "/run/opengl-driver";
-    LD_LIBRARY_PATH = "/run/opengl-driver/lib:/run/opengl-driver-32/lib";
-    GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
-    XMODIFIERS = "@im=fcitx";
 
-    GDK_BACKEND = "x11";
-    QT_QPA_PLATFORM = "xcb";
+    LIBVA_DRIVER_NAME = "nvidia";
+
+    OBS_USE_EGL = "1";
   };
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
