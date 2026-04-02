@@ -173,6 +173,7 @@
     steam = "setsid steam >/dev/null 2>&1 &";
     antigravity = "setsid antigravity >/dev/null 2>&1 &";
     tradingview = "setsid tradingview >/dev/null 2>&1 &";
+    chrome = "setsid google-chrome-stable >/dev/null 2>&1 &";
   };
 
   services.printing.enable = true;
@@ -257,6 +258,7 @@
     wget
     bibata-cursors
     tradingview
+    google-chrome
   ];
   
   # enable polkit (PolicyKit) agent
