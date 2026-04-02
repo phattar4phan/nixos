@@ -159,7 +159,6 @@
     vlc = "setsid vlc >/dev/null 2>&1 &";
     loupe = "setsid loupe >/dev/null 2>&1 &";
     blender = "setsid blender >/dev/null 2>&1 &";
-    obs = "setsid obs >/dev/null 2>&1 &";
     deact = "deactivate"; #only for deactivate from python virtualenv
     libreoffice = "setsid libreoffice >/dev/null 2>&1 &";
     cm = "setsid crossmacro >/dev/null 2>&1 &";
@@ -196,6 +195,14 @@
     dedicatedServer.openFirewall = true; # Open ports for Source Dedicated Server hosting
   };
 
+  #obs-studio
+  programs.obs-studio = {
+    enable = true;
+    package = pkgs.obs-studio.override {
+      ffmpeg = pkgs.ffmpeg-full;
+    };
+  };
+
   # System packages
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
@@ -228,7 +235,6 @@
     libnotify
     blender
     davinci-resolve
-    obs-studio
     xxd
     bat
     fastfetch
