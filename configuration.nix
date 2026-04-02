@@ -195,14 +195,6 @@
     dedicatedServer.openFirewall = true; # Open ports for Source Dedicated Server hosting
   };
 
-  #obs-studio
-  programs.obs-studio = {
-    enable = true;
-    package = pkgs.obs-studio.override {
-      ffmpeg = pkgs.ffmpeg-full;
-    };
-  };
-
   # System packages
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
@@ -262,6 +254,7 @@
     tradingview
     google-chrome
     ffmpeg-full
+    obs-studio
   ];
   
   # enable polkit (PolicyKit) agent
