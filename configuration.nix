@@ -259,6 +259,7 @@
     bibata-cursors
     tradingview
     google-chrome
+    ffmpeg-full
   ];
   
   # enable polkit (PolicyKit) agent
