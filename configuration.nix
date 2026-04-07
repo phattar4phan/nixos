@@ -255,6 +255,8 @@
     google-chrome
     ffmpeg-full
     obs-studio
+    fx
+    jq
   ];
   
   # enable polkit (PolicyKit) agent
