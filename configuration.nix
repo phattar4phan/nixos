@@ -56,7 +56,7 @@
     config = {
       user = {
         name = "pxzc1";
-        email = "tonaok2555@gmail.com";
+        email = "phattar4phan@gmail.com";
       };
     };
   };
