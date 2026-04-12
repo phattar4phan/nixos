@@ -55,7 +55,7 @@
     enable = true;
     config = {
       user = {
-        name = "pxzc1";
+        name = "phattar4phan";
         email = "phattar4phan@gmail.com";
       };
     };
