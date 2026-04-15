@@ -169,7 +169,8 @@
     antigravity = "setsid antigravity >/dev/null 2>&1 &";
     tradingview = "setsid tradingview >/dev/null 2>&1 &";
     chrome = "setsid google-chrome-stable >/dev/null 2>&1 &";
-    mt5 = "setsid wine ~/.wine/drive_c/Program\ Files/MetaTrader\ 5/terminal.exe >/dev/null 2>&1 &";
+    mt5 = "setsid wine ~/.wine/drive_c/Program\ Files/MetaTrader\ 5/terminal64.exe >/dev/null 2>&1 &";
+    studio = "setsid android-studio >/dev/null 2>&1 &";
   };
 
   services.printing.enable = true;
@@ -258,6 +259,7 @@
     obs-studio
     fx
     jq
+    android-studio-full
   ];
   
   # enable polkit (PolicyKit) agent
