@@ -209,8 +209,6 @@
     kitty
     firefox
     gcc
-    est for ongoing Android development
-
     cmake
     gdb
     ninja
