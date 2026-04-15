@@ -50,6 +50,11 @@
     ];
   };
 
+  # nixpkgs config
+  nixpkgs.config = {
+    android_sdk.accept_license = true;
+  };
+
   #github configs
   programs.git = {
     enable = true;
@@ -204,6 +209,8 @@
     kitty
     firefox
     gcc
+    est for ongoing Android development
+
     cmake
     gdb
     ninja
