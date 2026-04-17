@@ -265,6 +265,7 @@
     fx
     jq
     android-studio-full
+    uv
   ];
   
   # enable polkit (PolicyKit) agent
