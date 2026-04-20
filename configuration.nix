@@ -121,6 +121,7 @@
   };
   
   services.asusd.enable = true;
+  services.asusd.enableUserService = true;
   # services.supergfxd.enable = true; (remove # if want hybrid graphics, iGPU + dGPU)
 
   environment.sessionVariables = {
@@ -176,6 +177,7 @@
     chrome = "setsid google-chrome-stable >/dev/null 2>&1 &";
     mt5 = "setsid wine ~/.wine/drive_c/Program\ Files/MetaTrader\ 5/terminal64.exe >/dev/null 2>&1 &";
     studio = "setsid android-studio >/dev/null 2>&1 &";
+    proton = "stesid protonvpn-app >/dev/null 2>&1 &";
   };
 
   services.printing.enable = true;
@@ -266,6 +268,7 @@
     jq
     android-studio-full
     uv
+    protonvpn-gui
   ];
   
   # enable polkit (PolicyKit) agent
