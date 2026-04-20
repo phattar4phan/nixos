@@ -122,7 +122,6 @@
   
   services.asusd.enable = true;
   services.asusd.enableUserService = true;
-  services.asusd.enableUserDaemon = true;
   # services.supergfxd.enable = true; (remove # if want hybrid graphics, iGPU + dGPU)
 
   environment.sessionVariables = {
