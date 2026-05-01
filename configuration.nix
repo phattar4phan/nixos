@@ -270,6 +270,7 @@
     android-studio-full
     uv
     protonvpn-gui
+    plawright
   ];
   
   # enable polkit (PolicyKit) agent
