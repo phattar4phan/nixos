@@ -270,7 +270,8 @@
     android-studio-full
     uv
     protonvpn-gui
-    playwright
+    mesa-demos
+    vulkan-tools
   ];
   
   # enable polkit (PolicyKit) agent
