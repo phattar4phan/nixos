@@ -272,6 +272,7 @@
     protonvpn-gui
     mesa-demos
     vulkan-tools
+    git-lfs
   ];
   
   # enable polkit (PolicyKit) agent
