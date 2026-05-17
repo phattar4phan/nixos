@@ -179,6 +179,7 @@
     studio = "setsid android-studio >/dev/null 2>&1 &";
     proton = "setsid protonvpn-app >/dev/null 2>&1 &";
     rog = "setsid rog-control-center >/dev/null 2>&1 &";
+    mcpe = "setsid flatpak run io.mrarm.mcpelauncher >/dev/null 2>&1";
   };
 
   services.printing.enable = true;
