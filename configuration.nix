@@ -274,7 +274,6 @@
     mesa-demos
     vulkan-tools
     git-lfs
-    git-xet
   ];
   
   # enable polkit (PolicyKit) agent
