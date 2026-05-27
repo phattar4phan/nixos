@@ -69,11 +69,6 @@
     };
   };
 
-  virtualisation.docker.enable = true;
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-  services.spice-vdagentd.enable = true;
-
   # Users
   users.users.phattaraphan = {
     isNormalUser = true;
@@ -86,10 +81,31 @@
       "uinput"
       "crossmacro"
       "libvirtd"
-      "kvm"
-      "docker"
     ];
     packages = with pkgs; [];
+  };
+
+  virtualisation = {
+    spiceUSBRedirection.enable = true;
+
+    libvirtd = {
+      enable = true;
+
+      allowedBridges = [ "virbr0" ];
+
+      qemu = {
+        package = pkgs.qemu_kvm;
+
+        runAsRoot = false;
+
+        swtpm.enable = true;
+
+        ovmf = {
+          enable = true;
+          packages = [ pkgs.OVMFFull.fd ];
+        };
+      };
+    };
   };
 
   users.groups.uinput = {};
@@ -152,6 +168,8 @@
     LIBVA_DRIVER_NAME = "nvidia";
 
     OBS_USE_EGL = "1";
+
+    LIBVIRT_DEFAULT_URI = "qemu:///system";
   };
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
@@ -294,11 +312,18 @@
     git-lfs
     nixd
     virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    spice-vdagent
+    win-virtio
     freerdp
+    remmina
     virtiofsd
-    dialog
-    docker
-    docker-compose
+    swtpm
+    dnsmasq
+    bridge-utils
   ];
   
   # enable polkit (PolicyKit) agent
@@ -371,7 +396,10 @@
     options = "--delete-older-than 7d";
   };
 
-  boot.kernelModules = [ "uinput" ];
+  boot.kernelModules = [
+    "uinput"
+    "kvm-amd"
+  ];
 
   # hides old stuff from the boot menu but keeps them on disk for 7 days.
   boot.loader.systemd-boot.configurationLimit = 5;
