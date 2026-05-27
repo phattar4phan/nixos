@@ -337,6 +337,12 @@
     enable32Bit = true;
   };
 
+  hardware.graphics.extraPackages = with pkgs; [
+    mesa
+    libGL
+    virglrenderer
+  ];
+
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
