@@ -296,6 +296,8 @@
     freerdp
     virtiofsd
     dialog
+    docker
+    docker-compose
   ];
   
   # enable polkit (PolicyKit) agent
