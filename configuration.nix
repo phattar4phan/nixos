@@ -312,7 +312,7 @@
     spice-gtk
     spice-protocol
     spice-vdagent
-    win-virtio
+    virtio-win
     freerdp
     remmina
     virtiofsd
