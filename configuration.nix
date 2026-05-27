@@ -294,6 +294,7 @@
     virt-manager
     freerdp
     virtiofsd
+    dialog
   ];
   
   # enable polkit (PolicyKit) agent
