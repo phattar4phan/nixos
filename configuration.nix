@@ -293,7 +293,6 @@
     nixd
     virt-manager
     freerdp
-    winapps
     virtiofsd
   ];
   
