@@ -81,10 +81,14 @@
       "uinput"
       "crossmacro"
       "libvirtd"
+      "vboxusers"
     ];
     packages = with pkgs; [];
   };
 
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  
   virtualisation = {
     spiceUSBRedirection.enable = true;
 
@@ -319,6 +323,10 @@
     swtpm
     dnsmasq
     bridge-utils
+    mesa
+    libGL
+    virglrenderer
+    libepoxy
   ];
   
   # enable polkit (PolicyKit) agent
@@ -341,6 +349,7 @@
     mesa
     libGL
     virglrenderer
+    libepoxy
   ];
 
   hardware.nvidia = {
@@ -400,6 +409,9 @@
   boot.kernelModules = [
     "uinput"
     "kvm-amd"
+    "vboxdrv"
+    "vboxnetflt"
+    "vboxnetadp"
   ];
 
   # hides old stuff from the boot menu but keeps them on disk for 7 days.
