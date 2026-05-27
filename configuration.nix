@@ -55,6 +55,9 @@
     android_sdk.accept_license = true;
   };
 
+  # automatically update firmware for ASUS laptop
+  services.fwupd.enable = true;
+
   #github configs
   programs.git = {
     enable = true;
@@ -66,11 +69,24 @@
     };
   };
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  services.spice-vdagentd.enable = true;
+
   # Users
   users.users.phattaraphan = {
     isNormalUser = true;
     description = "Phattaraphan";
-    extraGroups = [ "networkmanager" "wheel" "video" "input" "uinput" "crossmacro"]; # added video for NVIDIA
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "input"
+      "uinput"
+      "crossmacro"
+      "libvirtd"
+      "kvm"
+    ];
     packages = with pkgs; [];
   };
 
@@ -274,6 +290,11 @@
     mesa-demos
     vulkan-tools
     git-lfs
+    nixd
+    virt-manager
+    freerdp
+    winapps
+    virtiofsd
   ];
   
   # enable polkit (PolicyKit) agent
