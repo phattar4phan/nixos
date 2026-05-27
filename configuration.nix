@@ -86,6 +86,7 @@
       "crossmacro"
       "libvirtd"
       "kvm"
+      "docker"
     ];
     packages = with pkgs; [];
   };
