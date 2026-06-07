@@ -209,7 +209,7 @@
   # System packages
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
-    vscode-fhs
+    vscode
     kitty
     firefox
     gcc
