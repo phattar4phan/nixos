@@ -80,31 +80,7 @@
       "input"
       "uinput"
       "crossmacro"
-      "libvirtd"
-      "vboxusers"
     ];
-    packages = with pkgs; [];
-  };
-
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-  
-  virtualisation = {
-    spiceUSBRedirection.enable = true;
-
-    libvirtd = {
-      enable = true;
-
-      allowedBridges = [ "virbr0" ];
-
-      qemu = {
-        package = pkgs.qemu_kvm;
-
-        runAsRoot = false;
-
-        swtpm.enable = true;
-      };
-    };
   };
 
   users.groups.uinput = {};
@@ -167,8 +143,6 @@
     LIBVA_DRIVER_NAME = "nvidia";
 
     OBS_USE_EGL = "1";
-
-    LIBVIRT_DEFAULT_URI = "qemu:///system";
   };
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
@@ -310,22 +284,8 @@
     vulkan-tools
     git-lfs
     nixd
-    virt-manager
-    virt-viewer
-    spice
-    spice-gtk
-    spice-protocol
-    spice-vdagent
-    virtio-win
-    freerdp
-    remmina
-    virtiofsd
-    swtpm
-    dnsmasq
-    bridge-utils
     mesa
     libGL
-    virglrenderer
     libepoxy
     gemini-cli
   ];
@@ -409,10 +369,6 @@
 
   boot.kernelModules = [
     "uinput"
-    "kvm-amd"
-    "vboxdrv"
-    "vboxnetflt"
-    "vboxnetadp"
   ];
 
   # hides old stuff from the boot menu but keeps them on disk for 7 days.
