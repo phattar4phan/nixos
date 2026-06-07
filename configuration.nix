@@ -78,7 +78,6 @@
       "video"
       "input"
       "uinput"
-      "crossmacro"
     ];
   };
 
@@ -87,11 +86,6 @@
   services.udev.extraRules = ''
     KERNEL=="uinput", GROUP="uinput", MODE="0660", OPTIONS+="static_node=uinput"
   '';
-
-  programs.crossmacro = {
-    enable = true;
-    users = [ "phattaraphan" ];
-  };
 
   # Allow unfree packages (required for NVIDIA, VSCode)
   nixpkgs.config.allowUnfree = true;
