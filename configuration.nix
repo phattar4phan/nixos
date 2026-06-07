@@ -374,5 +374,5 @@
   # hides old stuff from the boot menu but keeps them on disk for 7 days.
   boot.loader.systemd-boot.configurationLimit = 5;
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 }

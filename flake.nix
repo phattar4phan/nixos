@@ -3,10 +3,7 @@
 
   inputs = {
     # Using the same version as your stateVersion
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-
-    #crossmacro
-    crossmacro.url = "github:alper-han/CrossMacro";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
