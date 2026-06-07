@@ -257,9 +257,6 @@
     antigravity-fhs
     gamescope
     claude-code
-    gemini-cli
-    wineWowPackages.waylandFull
-    winetricks
     wget
     bibata-cursors
     tradingview
@@ -270,7 +267,7 @@
     jq
     android-studio-full
     uv
-    protonvpn-gui
+    proton-vpn
     mesa-demos
     vulkan-tools
     git-lfs
