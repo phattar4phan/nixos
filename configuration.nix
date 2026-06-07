@@ -327,6 +327,7 @@
     libGL
     virglrenderer
     libepoxy
+    gemini-cli
   ];
   
   # enable polkit (PolicyKit) agent
