@@ -1,9 +1,8 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.crossmacro.nixosModules.default
   ];
 
   # Bootloader
