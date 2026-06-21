@@ -298,6 +298,8 @@
     libepoxy
     gemini-cli
     libimobiledevice
+    usbutils
+    usdmuxd
   ];
   
   # enable polkit (PolicyKit) agent
