@@ -25,6 +25,7 @@
   networking.wireless.iwd = {
     enable = false;
   };
+  networking.dhcpcd.enable = true;
 
   # Networking for spotify
   networking.firewall.allowedTCPPorts = [ 57621 ]; #sync local tracks from your filesystem with mobile devices in the same network
@@ -132,6 +133,9 @@
       };
     };
   };
+
+  services.usbmuxd.enable = true;
+
   
   services.asusd.enable = true;
 
@@ -290,6 +294,7 @@
     libGL
     libepoxy
     gemini-cli
+    libimobiledevice
   ];
   
   # enable polkit (PolicyKit) agent
@@ -371,6 +376,7 @@
 
   boot.kernelModules = [
     "uinput"
+    "ipheth"
   ];
 
   # hides old stuff from the boot menu but keeps them on disk for 7 days.
