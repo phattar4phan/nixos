@@ -134,7 +134,10 @@
     };
   };
 
-  services.usbmuxd.enable = true;
+  services.usbmuxd = {
+    enable = true;
+    package = pkgs.usbmuxd2;
+  };
 
   
   services.asusd.enable = true;
