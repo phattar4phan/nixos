@@ -14,7 +14,7 @@
   networking.hostName = "phattar4phan";
   networking.networkmanager = {
     enable = true;
-    wifi.backend = "iwd";
+    wifi.backend = "wpa_supplicant";
     wifi.powersave = false;
   };
   networking.nameservers = [
@@ -23,12 +23,7 @@
   ];
   networking.timeServers = [ "time.google.com" "time1.google.com" "pool.ntp.org" ];
   networking.wireless.iwd = {
-    enable = true;
-    settings = {
-      Settings = {
-        AutoConnect = true;
-      };
-    };
+    enable = false;
   };
 
   # Networking for spotify
