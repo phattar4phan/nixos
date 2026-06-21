@@ -10,13 +10,29 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+  hardware.enableRedistributableFirmware = true;
+  networking.hostName = "phattar4phan";
+  networking.networkmanager = {
+    enable = true;
+    wifi.backend = "iwd";
+    wifi.powersave = false;
+  };
+  networking.nameservers = [
+    "1.1.1.1"
+    "1.0.0.1"
+  ];
   networking.timeServers = [ "time.google.com" "time1.google.com" "pool.ntp.org" ];
+  networking.wireless.iwd = {
+    enable = true;
+    settings = {
+      Settings = {
+        AutoConnect = true;
+      };
+    };
+  };
 
   # Networking for spotify
   networking.firewall.allowedTCPPorts = [ 57621 ]; #sync local tracks from your filesystem with mobile devices in the same network
-  networking.firewall.allowedUDPPorts = [ 5353 ]; #enable discovery of Google Cast devices (and possibly other Spotify Connect devices) in the same network by the Spotify app
 
   # Timezone
   time.timeZone = "Asia/Bangkok";
@@ -183,8 +199,11 @@
   };
 
   services.printing.enable = true;
-  services.avahi.enable = true;
-  services.avahi.nssmdns4 = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
   # pipewire
   services.pipewire = {
