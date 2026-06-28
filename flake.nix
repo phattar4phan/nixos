@@ -2,21 +2,34 @@
   description = "Phattaraphan's NixOS Flake";
 
   inputs = {
-    # Using the same version as your stateVersion
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+
+    antigravity-nix = {
+      url = "github:jacopone/antigravity-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs:
+  let
+    system = "x86_64-linux";
+  in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      inherit system;
 
-      specialArgs = { inherit inputs; };
+      specialArgs = {
+        inherit inputs system;
+      };
+
       modules = [
-        # imports hardware detection
         ./hardware-configuration.nix
-        
-        # imports configuration file
         ./configuration.nix
+
+        ({ ... }: {
+          environment.systemPackages = [
+            inputs.antigravity-nix.packages.${system}.google-antigravity-cli
+          ];
+        })
       ];
     };
   };
