@@ -303,6 +303,7 @@
     libimobiledevice
     usbutils
     usbmuxd
+    kilocode-cli
   ];
   
   # enable polkit (PolicyKit) agent
