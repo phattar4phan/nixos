@@ -68,7 +68,7 @@
   };
 
   services.resolved.enable = true;
-  
+
   # automatically update firmware for ASUS laptop
   services.fwupd.enable = true;
 
@@ -102,7 +102,7 @@
   services.udev.extraRules = ''
     KERNEL=="uinput", GROUP="uinput", MODE="0660", OPTIONS+="static_node=uinput"
   '';
-2
+
   # Allow unfree packages (required for NVIDIA, VSCode)
   nixpkgs.config.allowUnfree = true;
 
