@@ -314,6 +314,9 @@
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
 
+  # enable execution of dynamically linked executables
+  programs.nix-ld.enable = true;
+
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.graphics = {
