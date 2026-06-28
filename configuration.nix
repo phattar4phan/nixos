@@ -300,7 +300,6 @@
     mesa
     libGL
     libepoxy
-    gemini-cli
     libimobiledevice
     usbutils
     usbmuxd
