@@ -203,6 +203,7 @@
     proton = "setsid protonvpn-app >/dev/null 2>&1 &";
     rog = "setsid rog-control-center >/dev/null 2>&1 &";
     mcpe = "setsid flatpak run io.mrarm.mcpelauncher >/dev/null 2>&1";
+    cider = "setsid cider >/dev/null 2>&1 &";
   };
 
   services.printing.enable = true;
@@ -305,6 +306,7 @@
     usbutils
     usbmuxd
     kilocode-cli
+    cider-2
   ];
   
   # enable polkit (PolicyKit) agent
