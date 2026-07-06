@@ -306,7 +306,7 @@
     usbutils
     usbmuxd
     kilocode-cli
-    cider-2
+    speedtest-cli
   ];
   
   # enable polkit (PolicyKit) agent
