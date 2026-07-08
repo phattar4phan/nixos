@@ -264,7 +264,6 @@
     mako
     libnotify
     blender
-    davinci-resolve
     xxd
     bat
     fastfetch
@@ -275,26 +274,19 @@
     lsof
     rustup
     appimage-run
-    gimp
-    krita
     pinta
     webkitgtk_4_1
     gtk3
     gsettings-desktop-schemas
-    antigravity-fhs
     gamescope
-    claude-code
     wget
     bibata-cursors
     tradingview
     google-chrome
     ffmpeg-full
-    obs-studio
     fx
     jq
-    android-studio-full
     uv
-    proton-vpn
     mesa-demos
     vulkan-tools
     git-lfs
@@ -305,7 +297,6 @@
     libimobiledevice
     usbutils
     usbmuxd
-    kilocode-cli
     speedtest-cli
   ];
   
