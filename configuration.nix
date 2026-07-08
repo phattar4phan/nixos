@@ -297,7 +297,7 @@
     libimobiledevice
     usbutils
     usbmuxd
-    speedtest-cli
+    gemini-cli
   ];
   
   # enable polkit (PolicyKit) agent

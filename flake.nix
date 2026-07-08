@@ -7,10 +7,6 @@
     antigravity-nix = {
       url = "github:jacopone/antigravity-nix";
     };
-
-    gemini-cli = {
-      url = "github:alezkv/gemini-cli-flake";
-    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -31,7 +27,6 @@
         ({ ... }: {
           environment.systemPackages = [
             inputs.antigravity-nix.packages.${system}.google-antigravity-cli
-            inputs.gemini-cli.packages.${system}.default
           ];
         })
       ];
