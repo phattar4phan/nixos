@@ -297,7 +297,7 @@
     libimobiledevice
     usbutils
     usbmuxd
-    gemini-cli
+    opencode
   ];
   
   # enable polkit (PolicyKit) agent
