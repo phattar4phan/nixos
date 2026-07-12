@@ -298,6 +298,7 @@
     usbutils
     usbmuxd
     opencode
+    claude-code
   ];
   
   # enable polkit (PolicyKit) agent
