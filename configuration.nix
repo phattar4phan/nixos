@@ -9,6 +9,16 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Early KMS: load NVIDIA modules in initrd so nvidia-modeset is ready
+  # before greetd/Hyprland try to grab DRM, avoiding the boot race
+  boot.initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
+
+  # Kernel & NVIDIA
+  boot.kernelParams = [
+    "nvidia-drm.modeset=1" 
+    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+  ];
+
   # Networking
   hardware.enableRedistributableFirmware = true;
   networking.hostName = "phattar4phan";
@@ -297,12 +307,6 @@
   
   # enable polkit (PolicyKit) agent
   security.polkit.enable = true;
-
-  # Kernel & NVIDIA
-  boot.kernelParams = [
-    "nvidia-drm.modeset=1" 
-    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
-  ];
 
   # enable execution of dynamically linked executables
   programs.nix-ld.enable = true;
