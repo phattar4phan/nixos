@@ -344,11 +344,6 @@
     };
   };
 
-  systemd.services.greetd = {
-    after = [ "systemd-user-sessions.service" "multi-user.target" ];
-    wants = [ "systemd-user-sessions.service" ];
-  };
-
   swapDevices = lib.mkForce [];
 
   services.earlyoom = {
