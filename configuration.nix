@@ -299,6 +299,7 @@
     usbmuxd
     opencode
     claude-code
+    cloudflared
   ];
   
   # enable polkit (PolicyKit) agent
