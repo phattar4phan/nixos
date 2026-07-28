@@ -37,7 +37,6 @@
   networking.wireless.iwd = {
     enable = false;
   };
-  networking.dhcpcd.enable = true;
 
   # Networking for spotify
   networking.firewall.allowedTCPPorts = [ 57621 ]; #sync local tracks from your filesystem with mobile devices in the same network
