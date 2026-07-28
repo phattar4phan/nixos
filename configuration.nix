@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -206,13 +206,6 @@
     cider = "setsid cider >/dev/null 2>&1 &";
   };
 
-  services.printing.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-
   # pipewire
   services.pipewire = {
     enable = true;
@@ -333,7 +326,7 @@
     open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-    powerManagement.enable = true;
+    powerManagement.enable = false;
   };
 
   services.ollama = {
@@ -341,21 +334,22 @@
     package = pkgs.ollama-cuda;
   };
 
-  # Greetd login manager with session choice
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        # Use tuigreet to ask for credentials before starting Hyprland
         command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-        user = "greeter"; 
+        user = "greeter";
       };
     };
   };
 
-  swapDevices = [
-    { device = "/swapfile"; size = 8*1024; }
-  ];
+  systemd.services.greetd = {
+    after = [ "systemd-user-sessions.service" "multi-user.target" ];
+    wants = [ "systemd-user-sessions.service" ];
+  };
+
+  swapDevices = lib.mkForce [];
 
   services.earlyoom = {
     enable = true;
