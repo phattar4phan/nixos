@@ -302,6 +302,8 @@
     opencode
     claude-code
     cloudflared
+    neovim
+    vimPlugins.LazyVim
   ];
   
   # enable polkit (PolicyKit) agent
