@@ -304,6 +304,15 @@
     cloudflared
     neovim
     vimPlugins.LazyVim
+    fd
+    lazygit
+    fzf
+    fish
+    lua
+    go
+    ruby
+    ghostscript
+    texliveFull
   ];
   
   # enable polkit (PolicyKit) agent
