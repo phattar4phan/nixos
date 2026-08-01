@@ -21,6 +21,12 @@
       modules = [
         ./hardware-configuration.nix
         ./configuration.nix
+
+        ({ ... }: {
+          environment.systemPackages = [
+            inputs.opencode-flake.packages.${system}.default
+          ];
+        })
       ];
     };
   };
