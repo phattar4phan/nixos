@@ -91,6 +91,7 @@
         email = "phattar4phan@gmail.com";
       };
     };
+    lfs.enable = true;
   };
 
   # Users
