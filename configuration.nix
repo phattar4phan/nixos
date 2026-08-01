@@ -300,7 +300,6 @@
     libimobiledevice
     usbutils
     usbmuxd
-    opencode
     claude-code
     cloudflared
     neovim

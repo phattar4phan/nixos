@@ -4,13 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
-    antigravity-nix = {
-      url = "github:jacopone/antigravity-nix";
-    };
-
-    gemini-cli = {
-      url = "github:alezkv/gemini-cli-flake";
-    };
+    opencode-flake.url = "github:aodhanhayter/opencode-flake";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -27,13 +21,6 @@
       modules = [
         ./hardware-configuration.nix
         ./configuration.nix
-
-        ({ ... }: {
-          environment.systemPackages = [
-            inputs.antigravity-nix.packages.${system}.google-antigravity-cli
-            inputs.gemini-cli.packages.${system}.default
-          ];
-        })
       ];
     };
   };
