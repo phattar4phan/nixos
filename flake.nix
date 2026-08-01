@@ -3,8 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-
-    opencode-flake.url = "github:aodhanhayter/opencode-flake";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -21,12 +19,6 @@
       modules = [
         ./hardware-configuration.nix
         ./configuration.nix
-
-        ({ ... }: {
-          environment.systemPackages = [
-            inputs.opencode-flake.packages.${system}.default
-          ];
-        })
       ];
     };
   };

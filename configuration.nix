@@ -313,6 +313,7 @@
     ruby
     ghostscript
     texliveFull
+    opencode
   ];
   
   # enable polkit (PolicyKit) agent
