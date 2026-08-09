@@ -266,7 +266,6 @@
     loupe #eog (gnome) / feh (terminal-friendly)
     mako
     libnotify
-    blender
     xxd
     bat
     fastfetch
@@ -277,7 +276,6 @@
     lsof
     rustup
     appimage-run
-    pinta
     webkitgtk_4_1
     gtk3
     gsettings-desktop-schemas
@@ -314,6 +312,7 @@
     ghostscript
     texliveFull
     opencode
+    wl-clicker
   ];
   
   # enable polkit (PolicyKit) agent
