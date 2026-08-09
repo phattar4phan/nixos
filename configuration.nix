@@ -312,9 +312,15 @@
     ghostscript
     texliveFull
     opencode
-    wl-clicker
+    crossmacro
+    crossmacro-daemon
   ];
   
+  services.crossmacro = {
+    enable = true;
+    users = [ "phattaraphan" ];
+  };
+
   # enable polkit (PolicyKit) agent
   security.polkit.enable = true;
 
