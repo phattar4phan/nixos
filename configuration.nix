@@ -28,8 +28,8 @@
     wifi.powersave = false;
   };
   networking.nameservers = [
-    "8.8.8.8"
     "1.1.1.1"
+    "8.8.8.8"
     "1.0.0.1"
   ];
   networking.resolvconf.enable = false;
@@ -77,7 +77,11 @@
     android_sdk.accept_license = true;
   };
 
-  services.resolved.enable = true;
+  services.resolved = {
+    enable = true;
+    dnssec = "true";
+    dnsovertls = "true";
+  }
 
   # automatically update firmware for ASUS laptop
   services.fwupd.enable = true;
