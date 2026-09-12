@@ -81,7 +81,7 @@
     enable = true;
     dnssec = "true";
     dnsovertls = "true";
-  }
+  };
 
   # automatically update firmware for ASUS laptop
   services.fwupd.enable = true;
