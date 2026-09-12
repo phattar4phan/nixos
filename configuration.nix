@@ -79,8 +79,9 @@
 
   services.resolved = {
     enable = true;
-    dnssec = "true";
-    dnsovertls = "true";
+
+    settings.Resolve.DNSSEC = "true";
+    settings.Resolve.DNSOverTLS = "true";
   };
 
   # automatically update firmware for ASUS laptop
