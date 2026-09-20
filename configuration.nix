@@ -380,7 +380,6 @@
   # Enable experimental Nix features
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
-    download-buffer-size = 5368709120; # 5GB in bytes
     auto-optimise-store = true; # Merges identical files to save space
     substituters = [
       "https://cache.nixos-cuda.org"
