@@ -383,11 +383,13 @@
     download-buffer-size = 5368709120; # 5GB in bytes
     auto-optimise-store = true; # Merges identical files to save space
     substituters = [
-      "https://cuda-maintainers.cachix.org"
+      "https://cache.nixos-cuda.org"
+      "https://cache.nixos.org"
     ];
     trusted-public-keys = [
-      "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
-    ]; #for binary cache
+      "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+    ];
   };
 
   nix.gc = {
