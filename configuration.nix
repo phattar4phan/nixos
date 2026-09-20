@@ -32,6 +32,7 @@
     "8.8.8.8"
     "1.0.0.1"
   ];
+  networking.enableIPv6 = false;
   networking.resolvconf.enable = false;
   networking.timeServers = [ "time.google.com" "time1.google.com" "pool.ntp.org" ];
   networking.wireless.iwd = {
