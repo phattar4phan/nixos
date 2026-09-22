@@ -357,14 +357,6 @@
     powerManagement.enable = false;
   };
 
-  services.ollama = {
-    enable = true;
-    package = pkgs.ollama-cuda;
-    acceleration = "cuda"; # Set to "cuda" for NVIDIA or "rocm" for AMD if supported
-    host = "127.0.0.1";
-    port = 11434;
-  };
-
   services.greetd = {
     enable = true;
     settings = {
