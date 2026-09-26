@@ -187,7 +187,6 @@
   # shell aliases
   environment.shellAliases = {
     brightset = "brightnessctl set";
-    firefox = "setsid firefox >/dev/null 2>&1 &";
     mute = "pamixer -m";
     unmute = "pamixer -u";
     prism = "setsid prismlauncher >/dev/null 2>&1 &";
@@ -203,18 +202,14 @@
     libreoffice = "setsid libreoffice >/dev/null 2>&1 &";
     cm = "setsid crossmacro >/dev/null 2>&1 &";
     gimp = "setsid gimp >/dev/null 2>&1 &";
-    krita = "setsid krita >/dev/null 2>&1 &";
-    pinta = "setsid pinta >/dev/null 2>&1 &";
     steam = "setsid steam >/dev/null 2>&1 &";
     antigravity = "setsid antigravity >/dev/null 2>&1 &";
     tradingview = "setsid tradingview >/dev/null 2>&1 &";
     chrome = "setsid google-chrome-stable >/dev/null 2>&1 &";
-    mt5 = "setsid wine ~/.wine/drive_c/Program\ Files/MetaTrader\ 5/terminal64.exe >/dev/null 2>&1 &";
     studio = "setsid android-studio >/dev/null 2>&1 &";
     proton = "setsid protonvpn-app >/dev/null 2>&1 &";
     rog = "setsid rog-control-center >/dev/null 2>&1 &";
     mcpe = "setsid flatpak run io.mrarm.mcpelauncher >/dev/null 2>&1";
-    cider = "setsid cider >/dev/null 2>&1 &";
     lmstudio = "setsid lm-studio >/dev/null 2>&1 &";
   };
 
@@ -243,7 +238,6 @@
     cudaPackages.cudatoolkit
     vscode
     kitty
-    firefox
     gcc
     cmake
     gdb
@@ -318,6 +312,8 @@
     crossmacro-daemon
     pi-coding-agent
     lmstudio
+    bind
+    dig
   ];
   
   services.crossmacro = {
