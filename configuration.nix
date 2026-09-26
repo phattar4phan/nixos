@@ -49,6 +49,7 @@
     enable = true;
     servers = [ "time.google.com" "time1.google.com" "pool.ntp.org" ];
   };
+  time.hardwareClockInLocalTime = false;
 
   # Locales
   i18n.defaultLocale = "en_US.UTF-8";
