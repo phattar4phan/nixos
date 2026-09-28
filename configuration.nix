@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ inputs, system, config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -307,13 +307,13 @@
     ruby
     ghostscript
     texliveFull
-    opencode
     crossmacro
     crossmacro-daemon
     pi-coding-agent
     lmstudio
     bind
     dig
+    inputs.opencode.packages.${system}.default #external
   ];
   
   services.crossmacro = {

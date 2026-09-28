@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    opencode.url = "github:aodhanhayter/opencode-flake";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
