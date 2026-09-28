@@ -296,10 +296,7 @@
     usbmuxd
     claude-code
     cloudflared
-    neovim
-    vimPlugins.LazyVim
     fd
-    lazygit
     fzf
     fish
     lua
