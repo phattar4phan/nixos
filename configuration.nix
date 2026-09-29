@@ -366,6 +366,9 @@
 
   # Enable experimental Nix features
   nix.settings = {
+    http-connections = 64;
+    max-substitution-jobs = 32;
+    connect-timeout = 10;
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true; # Merges identical files to save space
     substituters = [
