@@ -1,4 +1,4 @@
-{ inputs, system, config, pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -310,7 +310,7 @@
     lmstudio
     bind
     dig
-    inputs.opencode.packages.${system}.default #external
+    opencode
   ];
   
   services.crossmacro = {
