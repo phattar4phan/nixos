@@ -95,10 +95,14 @@
     lfs.enable = true;
   };
 
+  # enable fish shell
+  programs.fish.enable = true;
+
   # Users
   users.users.phattaraphan = {
     isNormalUser = true;
     description = "Phattaraphan";
+    shell = pkgs.fish;
     extraGroups = [
       "networkmanager"
       "wheel"
