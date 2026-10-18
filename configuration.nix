@@ -315,6 +315,7 @@
     bind
     dig
     nvitop
+    nvtop
   ];
   
   services.crossmacro = {
