@@ -14,6 +14,8 @@
   boot.initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
 
   # Kernel & NVIDIA
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   boot.kernelParams = [
     "nvidia-drm.modeset=1" 
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
@@ -315,7 +317,7 @@
     bind
     dig
     nvitop
-    nvtop
+    nvtopPackages.full
   ];
   
   services.crossmacro = {
