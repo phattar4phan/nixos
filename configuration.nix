@@ -314,7 +314,7 @@
     lmstudio
     bind
     dig
-    opencode
+    nvitop
   ];
   
   services.crossmacro = {
