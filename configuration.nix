@@ -312,7 +312,6 @@
     texliveFull
     crossmacro
     crossmacro-daemon
-    pi-coding-agent
     lmstudio
     bind
     dig
