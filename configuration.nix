@@ -42,6 +42,9 @@
   networking.enableIPv6 = true;
   networking.resolvconf.enable = false;
 
+  # Docker
+  virtualisation.docker.enable = true;
+
   # Networking for spotify
   networking.firewall.allowedTCPPorts = [ 57621 ]; #sync local tracks from your filesystem with mobile devices in the same network
 
