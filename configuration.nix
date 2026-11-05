@@ -114,6 +114,7 @@
       "video"
       "input"
       "uinput"
+      "docker"
     ];
   };
 
@@ -220,6 +221,7 @@
     rog = "setsid rog-control-center >/dev/null 2>&1 &";
     mcpe = "setsid flatpak run io.mrarm.mcpelauncher >/dev/null 2>&1";
     lmstudio = "setsid lm-studio >/dev/null 2>&1 &";
+    crossmacro = "setsid crossmacro >/dev/null 2>&1 &";
   };
 
   # pipewire
