@@ -33,10 +33,10 @@
   services.resolved = {
     enable = true;
     settings.Resolve.DNS = [
-      "1.1.1.1"
-      "1.0.0.1"
       "8.8.8.8"
       "8.8.4.4"
+      "1.1.1.1"
+      "1.0.0.1"
     ];
   };
   networking.enableIPv6 = true;
@@ -44,6 +44,7 @@
 
   # Docker
   virtualisation.docker.enable = true;
+  virtualisation.docker.daemon.settings.dns = [ "8.8.8.8" "1.1.1.1" ];
 
   # Networking for spotify
   networking.firewall.allowedTCPPorts = [ 57621 ]; #sync local tracks from your filesystem with mobile devices in the same network
@@ -217,7 +218,6 @@
     tradingview = "setsid tradingview >/dev/null 2>&1 &";
     chrome = "setsid google-chrome-stable >/dev/null 2>&1 &";
     studio = "setsid android-studio >/dev/null 2>&1 &";
-    proton = "setsid protonvpn-app >/dev/null 2>&1 &";
     rog = "setsid rog-control-center >/dev/null 2>&1 &";
     mcpe = "setsid flatpak run io.mrarm.mcpelauncher >/dev/null 2>&1";
     lmstudio = "setsid lm-studio >/dev/null 2>&1 &";
