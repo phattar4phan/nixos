@@ -32,15 +32,29 @@
 
   services.resolved = {
     enable = true;
-    settings.Resolve.DNS = [
-      "8.8.8.8"
-      "8.8.4.4"
-      "1.1.1.1"
-      "1.0.0.1"
-    ];
+    settings.Resolve = {
+      DNS = [ "127.0.0.1:5053" ];
+      FallbackDNS = [];
+    };
   };
   networking.enableIPv6 = true;
   networking.resolvconf.enable = false;
+
+  services.dnscrypt-proxy = {
+    enable = true;
+    upstreamDefaults = true;
+
+    settings = {
+      listen_addresses = [ "127.0.0.1:5053" ];
+      server_names = [ "cloudflare" ];
+
+      ipv4_servers = true;
+      ipv6_servers = false;
+
+      doh_servers = true;
+      dnscrypt_servers = false;
+    };
+  };
 
   # Docker
   virtualisation.docker.enable = true;
