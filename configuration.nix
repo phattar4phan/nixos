@@ -61,7 +61,16 @@
   virtualisation.docker.daemon.settings.dns = [ "8.8.8.8" "1.1.1.1" ];
 
   # Networking for spotify
-  networking.firewall.allowedTCPPorts = [ 57621 ]; #sync local tracks from your filesystem with mobile devices in the same network
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 57621 ]; # sync local tracks from fs with mobile devices in the same network
+    trustedInterfaces = [ config.services.tailscale.interfaceName ];
+    allowedUDPPorts = [ config.services.tailscale.port ];
+  };
+
+  systemd.services.tailscaled.serviceConfig.Environment = [
+    "TS_DEBUG_FIREWALL_MODE=nftables"
+  ];
 
   # Timezone
   time.timeZone = "Asia/Bangkok";
@@ -117,6 +126,11 @@
 
   # fish shell
   programs.fish.enable = true;
+
+  # tailscale
+  services.tailscale.enable = true;
+  networking.nftables.enable = true;
+
 
   # Users
   users.users.phattaraphan = {
