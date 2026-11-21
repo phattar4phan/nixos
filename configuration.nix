@@ -115,8 +115,11 @@
     lfs.enable = true;
   };
 
-  # enable fish shell
+  # fish shell
   programs.fish.enable = true;
+
+  # tailscale network
+  services.tailscale.enable = true;
 
   # Users
   users.users.phattaraphan = {
